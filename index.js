@@ -60,6 +60,7 @@ client.on('ready', () => {
 	}
 
 	function AUTO_SEND_MESSAGE() {
+		console.log("\nFetching data !!!\n");
 		var req = http.request(options, function(res) {
 			res.setEncoding('utf8');
 			res.on('data', function (chunk) {
@@ -67,10 +68,10 @@ client.on('ready', () => {
 				if (data.length) {
 					AUTO_SEND_MESSAGE_RUN(data)
 				}
-				setTimeout(function() {
-					AUTO_SEND_MESSAGE();
-				}, CONFIG.DELAY);
 			});
+			setTimeout(function() {
+				AUTO_SEND_MESSAGE();
+			}, CONFIG.DELAY);
 		});
 
 		req.on('error', function(e) {
