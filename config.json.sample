@@ -1,0 +1,8 @@
+{
+	"PROTOCOL": "http",
+	"HOST": "localhost",
+	"URI": "/mygit/qml",
+	"URI_DATA": "/_T/notif_wa_load",
+	"DELAY": 30000,
+	"DELAY_MESSAGE": 3000
+}
